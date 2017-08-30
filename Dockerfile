@@ -1,6 +1,8 @@
 # use a node base image
 FROM node:7-onbuild
-
+sudo groupadd docker
+sudo gpasswd -a $USER docker
+newgrp docker
 # set maintainer
 LABEL maintainer "njabulo@getintodevops.com"
 
